@@ -3,6 +3,7 @@
     background-color: $bg-color;
     padding: $s-size 0;
     @include flexBox(space-between, center);
+    padding-left: 10rem;
     
     .menu-wrapper{
         width: 70%;
@@ -83,5 +84,21 @@
         
         
     
+    }
+}
+
+@include responsive_tab(){
+    .menu-wrapper{
+        width: 100%!important;
+        padding: 0 4rem!important;
+        margin-left: 0!important;
+    }
+
+    .menu-category{
+        width: 80%!important;
+    }
+
+    .menu-items{
+        grid-template-columns: repeat(3,250px)!important;
     }
 }

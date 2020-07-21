@@ -1,6 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/storage';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBe23lcUU1XZUB-1FPDNzFn34xBuLe4Foo",
@@ -21,6 +22,7 @@ class Firebase {
 
         this.auth = app.auth();
         this.db = app.firestore();
+        this.storage = app.storage();
     }
 
     //AUTH
@@ -92,6 +94,8 @@ class Firebase {
     generateId = () => this.db.collection('items').doc().id;
 
     addOrder = (id, details) => this.db.collection('orders').doc(id).set(details);
+
+    
 }
 
 

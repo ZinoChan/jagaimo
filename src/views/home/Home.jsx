@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { MENU } from '../../constants/routes';
 import HeartSpinner from '../../components/ui/HeartSpinner';
 import { useSelector } from 'react-redux';
-// import { items } from '../../db';
-//  import firebase from '../../firebase/firebase';
+
 import {motion } from 'framer-motion';
 
 
@@ -14,12 +13,7 @@ const Home = () =>  {
         isLoading: state.app.loading
     }));
 
-    //  React.useEffect(() => {
-    // //     items.forEach(item => {
-    // //         const id = firebase.generateId();
-    //          firebase.getItems('items');
-    // //     })
-    //  }, [])
+     
 
     return (
         

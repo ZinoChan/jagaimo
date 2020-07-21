@@ -27,4 +27,11 @@
         @include bgImage('/imgs/emptycart.png');
         height: 400px;
     }
+
+}
+
+@include responsive_tab(){
+    .cart-info{
+        transform: translateX(100%);
+    }
 }

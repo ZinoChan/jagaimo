@@ -61,3 +61,35 @@
         }
     }
 }
+
+
+//Media Queries
+@include responsive_tab(){
+    .home-text{width: 70%;}
+}
+
+@include responsive_max(421px){
+    html{font-size: 50%;}
+
+    .home-text{
+        width: 95%!important;
+        h1{
+            font-size: 6.5rem!important;
+        }
+    }
+
+    .social-icons{
+        top: 78%!important;
+        left: 50%!important;
+        right: initial!important;
+        transform: translate(-50%, 0)!important;
+        flex-direction: row!important;
+
+        i{
+            margin: 0 10px!important;
+        }
+    }
+
+
+
+}

@@ -15,13 +15,8 @@
 
 @mixin landingPage {
     width: 100%;
-    //max-width: 1460px;
     height: 100vh;
-    // max-height: 92vh;
-    // min-height: 92vh;
-    // margin: calc(8vh/2) auto;
     position: relative;
-    // border-radius: 30px;
     overflow: hidden;
 }
 
@@ -33,4 +28,29 @@
 
 
 
+@mixin  responsive_mobile() {
+    @media only screen and (max-width: 769px) {
+        @content;
+    }
+}
+
+// tablet
+@mixin  responsive_tab() {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+// variable
+@mixin  responsive_max ($max) {
+    @media only screen and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin  responsive_min ($min) {
+    @media only screen and (min-width: $min) {
+        @content;
+    }
+}
 

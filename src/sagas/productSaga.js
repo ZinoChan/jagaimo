@@ -24,8 +24,7 @@ function* productSaga({type, payload}){
         case GET_PRODUCTS:
             try {
                 yield initRequest();
-                const products = yield call(firebase.getItems);
-                yield call(console.log, products.docs);
+                const products = yield call(firebase.getItems, payload);
                 const items = products.docs.map(doc => doc.data());
                 
                 yield put(getProductsSuccess(items));

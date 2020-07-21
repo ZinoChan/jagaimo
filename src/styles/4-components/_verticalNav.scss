@@ -68,3 +68,19 @@
     }
 
 }
+
+@include responsive_max(421px){
+    .v-nav{
+        width: 100%!important;
+        height: auto!important;
+        top: initial!important;
+        ul{
+            flex-direction: row-reverse!important;
+            .nav-btn{
+                margin: 0 5px!important;
+                padding: 1rem 1.5rem!important;
+            }
+        }
+    }
+
+}
