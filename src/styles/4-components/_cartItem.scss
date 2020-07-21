@@ -1,0 +1,43 @@
+.cart-item{
+    background: $white;
+    padding: 10px;
+    box-shadow: 0px 0px 48px -15px rgba(204,204,204,0.91);
+    border-radius: 10px;
+    cursor: pointer;
+    @include flexBox(space-between, center);
+
+    .cart-img{
+        @include bgImage('/imgs/p-1.png');
+        background-size: contain!important;
+        height: 120px;
+        width: 100px;
+    }
+
+    h3{font-size: $m-size;}
+
+    .cart-item-info{
+        @include flexBox(space-between, flex-start);
+        flex-direction: column;
+        height: 120px;
+    }
+
+   
+    .price{
+        font-weight: $bold;
+        font-size: $l-size;
+        display: inline-block;
+        margin-top: auto;
+    }
+
+    .delete {
+        padding: 0 $m-size;
+        
+        i{
+            font-size: $l-size;
+            color: $main-btn-hover;
+            font-weight: bold;
+        }
+    }
+        
+
+}

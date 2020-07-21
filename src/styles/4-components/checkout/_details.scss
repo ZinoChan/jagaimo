@@ -1,0 +1,13 @@
+.details{
+    @include landingPage();
+    background-color: $white;
+    overflow-y: visible;
+
+    form{
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: translate(0,0);
+        margin: $l-size auto;
+    }
+}

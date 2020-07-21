@@ -1,0 +1,26 @@
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+    h3{font-size: $l-size; margin-bottom: $m-size;}
+
+    input{
+        margin-bottom: $m-size;
+        width: 60%;
+    }
+
+    .btn-dark{font-size: $m-size}
+}
+
+.close-btn{
+    font-size: $l-size;
+    font-weight: $bold;
+    font-family: $general-font;
+    color: crimson;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+}

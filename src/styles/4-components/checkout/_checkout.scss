@@ -1,0 +1,48 @@
+.checkout{
+
+    .checkout-header{
+        @include flexBox();
+        background-color: $light;
+        padding: $m-size 0;
+        text-align: center;
+
+    }
+
+    h3{
+        font-size: $m-size;
+        color: rgb(168, 168, 168);
+        margin-top: $l-size;
+    }
+
+    i{
+        font-size: $xl-size;
+        color: rgb(168, 168, 168);
+    }
+
+    .active_step{
+        transform: scale(1.1);
+        i {
+            color: rgb(19, 199, 19);
+        }
+
+        h3{color: $black;}
+    }
+
+    .client-info{
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        padding: 0 $xl-size;
+        margin: 0 15rem;
+    }
+
+}
+
+
+
+.checkout-btns{
+    width: 40vw;
+    margin: $l-size auto;
+    @include flexBox(space-between, center);
+
+    .btn-light,.btn-dark{border-radius: 0;}
+}

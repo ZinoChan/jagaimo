@@ -1,0 +1,36 @@
+.profile{
+    @include landingPage();
+    background-color: $bg-color;
+    .main-btn{
+        border-radius: 0;
+        margin-top: $l-size;
+    }
+
+    form{top: 60%;}
+
+    .profile-info{
+        margin-top: $m-size;
+        z-index: 99;
+        @include flexBox();
+        flex-direction: column;
+        .profile-img{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: $white;
+            background-color: $main-color;
+            font-size: bold;
+            border-radius: 50%;
+            font-size: $xl-size;
+            font-family: $general-font;
+            margin-bottom : $s-size;
+        }
+        .name{
+            font-size: $l-size;
+            font-family: $header-font;
+            font-weight: $bold;
+            text-transform: capitalize;
+        }
+    }
+}

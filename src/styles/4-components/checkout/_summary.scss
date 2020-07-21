@@ -1,0 +1,55 @@
+.summary{
+    @include landingPage();
+    background-color: $white;
+    overflow-y: visible;
+}
+
+.summary-content{
+    @include flexBox(space-between, flex-start);
+    width: 50vw;
+    margin: $l-size auto;
+
+    .summary-items{
+        width: 50%;
+    }
+
+    .cart-item{
+        width: 100%;
+
+        .cart-img{
+            width: 100px;
+            height: 100px;
+        }
+        .price{
+            font-size: $s-size;
+            margin-top: 10px;
+        }
+        .control-btns{
+            flex-direction: column;
+            order: -1;
+        }
+        .delete i{font-size: 2.2rem;}
+    }
+}
+
+.total-summary{
+    width: 50%;
+    padding: 0 $xl-size;
+
+    h2{font-size: $l-size; margin-bottom: $l-size;}
+
+    h3{font-size: $m-size; 
+        font-weight: $bold;
+        margin-bottom: $m-size;
+    }
+
+    .total-info{
+        @include flexBox(space-between, center);
+        border-bottom: 1px solid $light;
+        margin-bottom: $l-size;
+    }
+    .main-total{
+        @include flexBox(space-between, center);
+        h3:nth-child(2){color: rgb(54, 255, 47); font-size: 2.6rem;}
+    }
+}

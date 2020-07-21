@@ -1,0 +1,41 @@
+.details-link{
+    color: $black;
+    &:hover,
+    &:focus,
+    &:active{
+        color: crimson;
+    }
+}
+
+.item{
+    background: $white;
+    padding: 10px;
+    box-shadow: 0px 10px 48px -5px rgba(204,204,204,0.91);
+    border-radius: 10px;
+    cursor: pointer;
+
+    .item-img{
+        @include bgImage('/imgs/p-1.png');
+        background-size: contain!important;
+        height: 180px;
+    }
+
+    h3{
+        font-size: $m-size;
+    }
+
+    .item-footer{
+        @include flexBox(space-between, center);
+        .main-btn{
+            padding: 10px!important;
+            font-size: $s-size;
+            font-weight: $bold;  
+            border-radius: 0!important;   
+        }
+
+        .price{
+            font-weight: $bold;
+            font-size: $m-size;
+        }
+    }
+}

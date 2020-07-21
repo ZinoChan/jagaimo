@@ -1,0 +1,62 @@
+.payment{
+    @include landingPage();
+    background-color: $white;
+    overflow-y: visible;
+
+    .credit-card {
+        width: 50vw;
+        border: 2px solid $light;
+        margin: $m-size auto;
+    
+        .credit-card-header{
+            background-color: $light;
+            padding: $s-size $l-size;
+            display: grid;
+            grid-template-columns:  6fr 3fr;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: $m-size;
+
+    
+            p{
+                margin-top: $s-size;
+            }
+    
+            h3{ font-size: $m-size; color: $black; font-weight: $bold;}
+    
+        .card-img{
+            @include bgImage('/imgs/cards.png');
+            background-size: contain;
+            width: 100%;
+            height: 50px;
+        }
+        }
+    
+        form{
+            position: initial;
+            width: 100%;
+            top: initial;
+            left: initial;
+            transform: translate(0,0);
+            padding: 0 $m-size;
+    
+            .form-control{
+                width: 100%;
+            }
+    
+            .inline-form-control{
+                justify-content: space-between;
+                .form-control{
+                    width: 48%;
+                }
+            }
+        }
+    }
+
+    .checkout-btns{
+        margin-top: 2rem;
+        .btn-dark{
+            font-size: $m-size;
+        }
+    }
+}

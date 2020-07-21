@@ -1,0 +1,53 @@
+.contact{
+    @include landingPage();
+    background: #ebf5fc;
+
+    form{
+
+        h2{
+            text-align: center;
+            font-size: $l-size;
+            text-transform: capitalize;
+            color: #03a9f4;
+            margin-bottom: $m-size;
+        }
+
+        background: #ebf5fc;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: -5px -5px 10px rgba(255,255,255,.05),
+        5px 5px 15px rgba(0,0,0,0.5);
+
+        label{color: $muted;}
+
+        input{
+            background: #ebf5fc;
+            border-radius: 10px;
+            box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
+            inset 2px 2px 6px rgba(0,0,0,0.1);
+            color: #03a9f4;
+        }
+
+        textarea{
+            @extend input;
+            width: 100%;
+            height: 200px;
+        }
+
+        button{
+            margin-top: 20px;
+            background-color: #ebf5fc;
+            border-radius: 40px;
+            width: 150px;
+            font-size: $m-size;
+            font-weight: bold;
+            color: #03a9f4;
+            box-shadow:  -2px -2px 6px rgba(255,255,255,1),
+             2px 2px 6px rgba(0,0,0,0.1);
+            &:active{
+                box-shadow: inset -2px -2px 6px rgba(255,255,255,1),
+                inset 2px 2px 6px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}

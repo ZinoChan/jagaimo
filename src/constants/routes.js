@@ -1,0 +1,11 @@
+export const HOME = "/";
+export const MENU = "/menu";
+export const CART = "/cart";
+export const SIGNIN = "/signin";
+export const SIGNUP = "/signup";
+export const PROFILE ="/profile";
+export const ABOUT = "/about";
+export const CONTACT = "/contact";
+export const CHECKOUT_STEP_1 = "/checkout/step1";
+export const CHECKOUT_STEP_2 = "/checkout/step2";
+export const CHECKOUT_STEP_3 = "/checkout/step3";

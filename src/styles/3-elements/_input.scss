@@ -1,0 +1,48 @@
+input {
+    border: 1px solid $border-color!important;
+    background-color: transparent;
+    font-size: $m-size !important;
+    padding: $s-size $m-size!important;
+    font-weight: $bold;
+    box-shadow: 0;
+    outline: 0;
+    border-radius: 10px;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $border-color-focus;
+    }
+    &::-webkit-input-placeholder{
+        font-weight: $bold;
+        opacity: .8;
+    }
+    &:read-only,
+    &:disabled{
+        background-color: $semi-light;
+        &:hover{
+            cursor: default;
+        }
+    }
+}
+
+.react-tel-input{
+    min-height: 55px!important;
+    margin-bottom: 1.2rem!important;
+}
+
+.react-tel-input input[type=tel] {
+    @extend input;
+    width: 100% !important;
+    font-family: $general-font !important;
+    padding: $s-size 0!important;
+    padding-left: 50px!important;
+    font-size: $m-size !important;
+    border: 1px solid $border-color!important;
+    height: 100%;
+  }
+
+  .react-tel-input .flag-dropdown {
+      background-color: #ccc;
+  }
+  
+

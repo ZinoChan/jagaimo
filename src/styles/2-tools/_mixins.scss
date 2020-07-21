@@ -1,0 +1,36 @@
+@mixin transition($prop: all, $speed: .2s, $type: linear){
+    -webkit-transition: $prop $speed $type;
+    -moz-transition: $prop $speed $type;
+    -o-transition: $prop $speed $type;
+    -ms-transition: $prop $speed $type;
+    transition: $prop $speed $type;
+}
+
+@mixin bgImage($url) {
+    background-image: url($url);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin landingPage {
+    width: 100%;
+    //max-width: 1460px;
+    height: 100vh;
+    // max-height: 92vh;
+    // min-height: 92vh;
+    // margin: calc(8vh/2) auto;
+    position: relative;
+    // border-radius: 30px;
+    overflow: hidden;
+}
+
+@mixin flexBox($justify-content: center, $align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+
+

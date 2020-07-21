@@ -1,0 +1,68 @@
+.item-details{
+    @include landingPage();
+    background-color: $white;
+    padding: $m-size;
+
+    .detail-content-img{
+        width: 90%;
+        height: 100%;
+        @include bgImage('/imgs/p-1.png');
+        background-size: contain;
+    }
+
+    .item-details-content{
+        height: 95%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        h2{
+            font-size: $l-size;
+            text-transform: capitalize;
+            margin-bottom: $m-size;
+        }
+
+        p{
+            font-size: $m-size;
+            margin-bottom: $l-size;
+            padding-right: $xxl-size;
+        }
+
+        h3{
+            font-size: $m-size;
+            margin-bottom: $m-size;
+            color: $muted;
+        } 
+
+        .item-size{
+            margin-bottom: $m-size;
+        }
+
+        .item-toppings{
+            margin-bottom: $xl-size;
+        }
+    }
+
+    button{
+        border-radius: 40px;
+        padding: 10px $m-size;
+        margin: 0 10px;
+        font-size: $m-size;
+        &.active{
+            background-color: $main-color;
+            border-color: $main-color;
+        }
+    }
+
+    .item-price{
+        @include flexBox(stretch, center);
+        margin-bottom: $m-size;
+        .price {
+            font-size: $l-size;
+            font-weight: $bold;
+        }
+
+        .main-btn{
+            padding: $s-size $m-size;
+        }
+    }
+}

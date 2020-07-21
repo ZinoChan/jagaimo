@@ -1,0 +1,5 @@
+.control-btns{
+    @include flexBox();
+    span{font-size: $m-size; font-weight: bold; margin: 0 10px;}
+    .btn-light{padding: 5px 10px; font-size: $m-size; border-radius: 5px;}
+}

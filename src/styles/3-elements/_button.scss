@@ -1,0 +1,96 @@
+.main-btn{
+    background: $main-btn;
+    border-color: $main-btn;
+    color: $white;
+    padding: $m-size $xl-size;
+    border-radius: 40px;
+    font-size: $m-size;
+    @include transition(all, .3s, ease-in-out);
+    
+    &:hover{
+        background-color: $main-btn-hover;
+    }
+}
+
+.auth-btn{
+    background: $auth-btn;
+    border-color: $auth-btn;
+    color: $white;
+    padding: $m-size $l-size;
+    border-radius: 0;
+    font-size: $m-size;
+    margin-top: $l-size;
+    @include transition(all, .3s, ease-in-out);
+    
+    &:hover{
+        background-color: $auth-btn-hover;
+    }
+}
+
+.btn-dark{
+    border: 1px solid $black;
+    background: $black;
+    border-color: $black;
+    color: $white;
+    border-radius: 10px;
+    padding: $s-size $m-size;
+    @include transition(all, .3s, ease-in-out);
+    
+    &:hover{
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.btn-white{
+    background: transparent;
+    border: 1px solid transparent;
+    border-color: $white;
+    color: $white;
+    border-radius: 10px;
+    padding: $s-size $m-size;
+    @include transition(all, .3s, ease-in-out);
+    
+    &:hover{
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.nav-btn{
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: $m-size;
+    border-radius: 10px;
+    padding:$s-size;
+    @include transition(all, .3s, ease-in-out);
+    @include flexBox();
+    flex-direction: column;
+    
+    i{
+        font-size: $l-size;
+    }
+    
+}
+
+.btn-light{
+    background: $muted;
+    border: 1px solid $muted;
+    color: $white;
+    border-radius: 10px;
+    padding: $s-size $m-size;
+    @include transition(all, .3s, ease-in-out);
+    
+    &:hover{
+        background-color: $muted-hover;
+    }
+}
+
+
+
+button:disabled{
+    opacity: .5;
+    &:hover{
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,45 @@
+.cart-total{
+   @include flexBox();
+   flex-direction: column;
+   height: 300px;
+   border-radius: 20px;
+   width: 92%;
+   margin: 0 auto;
+   padding: $l-size;
+   position:sticky;
+   bottom: 0;
+   right: 20px;
+   background: $white;
+   box-shadow: 0 0 18px -10px #ddd;
+
+   
+
+   .sub-total, .tax, .total{
+       width: 100%;
+       @include flexBox(space-between, center);
+       margin-bottom: $m-size;
+
+       span{
+           color: $muted;
+           font-size: $m-size;
+       }
+   }
+
+   span.total-price{
+        font-weight: bold;
+        color: $black;
+    }
+
+    .total span{
+        color: $black;
+        font-size: $l-size;
+        font-weight: bold;
+    }
+
+   
+
+   .checkout-btn{
+       border-radius: 10px;
+       margin-top: auto;
+   }
+}

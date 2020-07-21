@@ -1,0 +1,70 @@
+.v-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    bottom: 0;
+    @include flexBox();
+
+    &.nav-light{
+        background-color: $white;
+
+        .nav-btn{
+            color: $muted;
+            &:hover, &.active{
+                border: 1px solid $main-color;
+                background-color: $main-color;
+                color: $white;
+            }
+        }
+    }
+    &.nav-dark{
+        background-color: $black;
+        .nav-btn{
+            box-shadow: -5px -5px 5px rgba(255,255,255,.13),
+            5px 5px 15px  rgba(255,255,255,.1);
+            color: $white;
+
+            &:hover{color: $main-color;}
+
+            &.active{
+                color: $main-color;
+                box-shadow: inset -5px -5px 5px rgba(255,255,255,.13),
+                inset 5px 5px 15px  rgba(0,0,0,.5);
+            }
+        }
+    }
+
+    .logo-img{
+        @include bgImage('/imgs/logo.png');
+        width: 100%;
+        height: 50px;
+        background-size: cover;
+    }
+}
+
+.v-navbar{
+
+    @include flexBox();
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    margin: auto 0;
+    padding: $m-size 10px;
+
+    .navbar-brand {
+        font-size: $s-size;
+        font-family: $logo-font;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .nav-btn{
+            margin: 10px 0;
+        }
+    }
+
+}

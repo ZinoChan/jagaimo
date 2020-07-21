@@ -1,0 +1,67 @@
+.auth-wrapper{
+    @include landingPage();
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    
+
+    .auth-img{
+        @include bgImage('/imgs/bg1.png');
+        background-size: cover;
+    }
+    
+    .auth-header{
+        @include flexBox(space-between, center);
+        padding: $m-size;
+
+        a{
+            color: $black;
+            font-weight: $bold;
+            @include transition();
+            &:hover{
+                text-decoration: underline;
+                color: $main-color;
+            }
+        }
+    }
+
+    .auth-content{position: relative;}
+
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    
+    .form-control{
+        @include flexBox(space-between, flex-start);
+        flex-direction: column;
+        width: 100%;
+
+        input{
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: $s-size;
+        }
+
+        label{
+            font-size: $m-size;
+            margin-bottom: $m-size;
+        }
+    }
+
+    .inline-form-control{
+        justify-content: space-between;
+        input{width: 95%;}
+    }
+
+    h1{
+        text-align: center;
+        font-size: $xxl-size;
+        font-family: $logo-font;
+        margin-bottom: $xl-size;
+    }
+}

@@ -1,0 +1,13 @@
+.badge{
+    position: absolute;
+    top: 0;
+    right: 12px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: $main-btn;
+    color: $white;
+    border-radius: 50%;
+}

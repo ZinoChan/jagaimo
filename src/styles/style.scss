@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,700;1,700&family=Montserrat+Alternates:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Raleway:wght@200;300;500;600;700&display=swap');
+//Settings
+@import '1-settings/colors';
+@import '1-settings/sizes';
+@import '1-settings/typograhpy';
+
+//Tools
+@import '2-tools/mixins';
+
+//Elements
+@import '3-elements/base';
+@import '3-elements/button';
+@import '3-elements/input';
+@import '3-elements/label';
+
+//Utils
+@import '5-utils/state';
+@import '5-utils/utils';
+
+//Components
+@import '4-components/home/home';
+@import '4-components/menu/menu';
+@import '4-components/productItem';
+@import '4-components/verticalNav';
+@import '4-components/cart/cart';
+@import '4-components/cartItem';
+@import '4-components/auth/auth';
+@import '4-components/spinner';
+@import '4-components/badge';
+@import '4-components/profile';
+@import '4-components/modal';
+@import '4-components/checkout/checkout';
+@import '4-components/checkout/summary';
+@import '4-components/checkout/details';
+@import '4-components/checkout/payment';
+@import '4-components/itemDetails';
+@import '4-components/controlBtns';
+@import '4-components/toast';
+@import '4-components/cartTotal';
+@import '4-components/contact/contact';
