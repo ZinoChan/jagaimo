@@ -29,7 +29,7 @@ const SignUp = () =>  {
             <div className="auth-content">
                 <div className="auth-header">
                     <Link to={HOME}>Home</Link>
-                    <p>You already have an account ? <Link to={SIGNIN}>Sign In</Link></p>
+                    <p className="switch-auth">You already have an account ? <Link to={SIGNIN}>Sign In</Link></p>
                 </div>
                 <Formik
                     initialValues={{
@@ -51,7 +51,8 @@ const SignUp = () =>  {
                 >
                     {props => (
                         <Form>
-                             {/* <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2> */}
+                            <h1>Sign Up</h1>
+                            <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2> 
                             <div className="inline-form-control d-flex">
                                 <CustomTextInput label="FirstName" type="text" name="firstName" placeholder="First name" />
                                 <CustomTextInput label="LastName" type="text" name="lastName" placeholder="Last name" />

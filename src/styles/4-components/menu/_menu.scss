@@ -3,12 +3,14 @@
     background-color: $bg-color;
     padding: $s-size 0;
     @include flexBox(space-between, center);
-    padding-left: 10rem;
+    width: 100vw;
+    padding-left: 110px;
     
     .menu-wrapper{
         width: 70%;
-        margin-left: 130px;
-        padding-right: $s-size;
+        padding: 3rem;
+        height: 100%;
+        margin: 0 auto;
     }
 
     h2{
@@ -18,7 +20,7 @@
 
     .menu-header{
         @include flexBox(space-between, center);
-        padding-top: $l-size;
+        margin-bottom: 4rem;
 
         .form-control{
             position: relative;
@@ -88,17 +90,53 @@
 }
 
 @include responsive_tab(){
-    .menu-wrapper{
-        width: 100%!important;
-        padding: 0 4rem!important;
-        margin-left: 0!important;
-    }
+    .menu{
+        width: 90vw;
+        margin-left: auto;
+        padding:  0 2rem;
 
-    .menu-category{
-        width: 80%!important;
+        .menu-wrapper{
+            padding: 0!important;
+            padding-top: 4rem!important; 
+            margin: 0 auto!important;
+            min-width: 100%!important;
+
+            .menu-category{
+                width: 60%!important;
+            }
+        }
     }
 
     .menu-items{
-        grid-template-columns: repeat(3,250px)!important;
+        grid-template-columns: repeat(3,1fr)!important;
+    }
+}
+
+@include responsive_mobile(){
+    .menu .menu-wrapper .menu-category{
+        width: 100%!important;
+    }
+
+    .menu-items{
+        grid-template-columns: repeat(2,1fr)!important;
+    }
+}
+
+@include responsive_max(411px){
+    .menu{
+        width: 100vw!important;
+        margin-left: 0!important;
+        .menu-header{
+            flex-direction: column;
+            text-align: center;
+            h2{
+                margin-bottom: 2rem;
+            }
+        }
+
+        .menu-category .nav-btn{padding: 5px!important;}
+    }
+    .menu-items{
+        grid-template-columns: 300px!important;
     }
 }

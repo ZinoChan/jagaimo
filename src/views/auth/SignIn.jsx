@@ -30,7 +30,7 @@ const SignIn = () =>  {
             <div className="auth-content">
                 <div className="auth-header">
                     <Link to={HOME}>Home</Link>
-                    <p>You don't have an account ? <Link to={SIGNUP}>Sign Up</Link></p>
+                    <p className="switch-auth">You don't have an account ? <Link to={SIGNUP}>Sign Up</Link></p>
                 </div>
                 <Formik
                     initialValues={{
@@ -48,10 +48,11 @@ const SignIn = () =>  {
                 >
                     {props => (
                         <Form>
+                            <h1>Sign In</h1>
                             <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2>
                             <CustomTextInput label="Email" type="email" name="email" placeholder="Email" />
                             <CustomTextInput label="Password" type="password" name="password" placeholder="Password" />
-                            <button className="auth-btn" type="submit">Sign Up</button>
+                            <button className="auth-btn" type="submit">Sign In</button>
                         </Form>
                     )}
                     

@@ -1,10 +1,11 @@
 .v-nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
     bottom: 0;
     @include flexBox();
+    overflow: hidden;
 
     &.nav-light{
         background-color: $white;
@@ -69,11 +70,16 @@
 
 }
 
+@include responsive_tab(){
+    .nav-light{width: 13vw!important;}
+}
+
 @include responsive_max(421px){
     .v-nav{
         width: 100%!important;
         height: auto!important;
         top: initial!important;
+        bottom: 0;
         ul{
             flex-direction: row-reverse!important;
             .nav-btn{

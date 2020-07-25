@@ -17,7 +17,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @mixin flexBox($justify-content: center, $align-items: center) {
