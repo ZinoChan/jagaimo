@@ -6,6 +6,15 @@
     bottom: 0;
     @include flexBox();
     overflow: hidden;
+    @include transition();
+
+    &.openNav{
+        transform: translateX(0)!important;
+    }
+
+    &.closeNav{
+        transform: translateX(-120%)!important;
+    }
 
     &.nav-light{
         background-color: $white;
@@ -71,22 +80,24 @@
 }
 
 @include responsive_tab(){
-    .nav-light{width: 13vw!important;}
+    .v-nav{width: 13vw!important;}
 }
 
-@include responsive_max(421px){
+@include responsive_max(411px){
+
     .v-nav{
-        width: 100%!important;
-        height: auto!important;
-        top: initial!important;
-        bottom: 0;
-        ul{
-            flex-direction: row-reverse!important;
-            .nav-btn{
-                margin: 0 5px!important;
-                padding: 1rem 1.5rem!important;
-            }
-        }
+        width: 20vw!important;
+        bottom: 50px!important;
+        transform: translateX(-120%);
+        .logo-img{display: none;}
+    }
+
+}
+
+@include responsive_max(360px){
+
+    .v-nav{
+        width: 25vw!important; 
     }
 
 }

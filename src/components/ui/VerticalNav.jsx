@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import * as ROUTES from '../../constants/routes';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signOut } from '../../actions/authActions';
+import MobileNav from './MobileNav';
 //import Badge from './Badge';
 
 
@@ -13,10 +14,18 @@ const VerticalNav = ({ isAuth, theme}) =>  {
     const dispatch =  useDispatch();
 
     const handleSignOutClick = () => dispatch(signOut());
+
+    const navRef = useRef();
+
+    const toggleNavbar = () => {
+        navRef.current.classList.toggle('openNav');
+    };
+    
    
 
     return (
-        <div className={`v-nav ${theme}`}>
+        <>
+        <div ref={navRef} className={`v-nav ${theme}`}>
             <nav className="v-navbar">              
                 <ul className="navbar-main-list mx-auto">
                     <NavLink    
@@ -77,6 +86,8 @@ const VerticalNav = ({ isAuth, theme}) =>  {
                 </ul>              
             </nav>
         </div>
+        <MobileNav theme={theme} toggleNavbar={toggleNavbar}/>
+        </>
     )
 }
 

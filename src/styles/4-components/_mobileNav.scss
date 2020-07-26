@@ -1,0 +1,49 @@
+.mobile-bars, .mobile-cart{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 25vw;
+    height: 50px;
+    z-index: 9999;
+    i{
+        font-size: 5rem;
+        color: $white;
+    }
+
+    &.nav-light{
+        background: $main-color;
+    }
+
+    &.nav-dark{
+        background-color: $black;
+        box-shadow: -5px -5px 5px rgba(255,255,255,.13),
+        5px 5px 15px  rgba(255,255,255,.1);
+
+        &.active{
+            box-shadow: inset -5px -5px 5px rgba(255,255,255,.13),
+            inset 5px 5px 15px  rgba(0,0,0,.5);
+        }
+    }
+}
+
+.mobile-cart{
+    right: 0;
+}
+
+.mobile-bars{
+    left: 0;
+}
+
+@include responsive_max(411px){
+    .mobile-bars, .mobile-cart{
+        @include flexBox();
+        width: 20vw;
+    }
+}
+
+@include responsive_max(360px){
+    .mobile-bars, .mobile-cart{
+        @include flexBox();
+        width: 25vw;
+    }
+}

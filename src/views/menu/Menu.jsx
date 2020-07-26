@@ -8,6 +8,7 @@ import  HeartSpinner from '../../components/ui/HeartSpinner';
 import MenuNav from '../../components/ui/MenuNav';
 import Search from '../../components/ui/Search';
 import Cart from '../../components/cart/Cart';
+
 //import { motion } from 'framer-motion';
 
 
@@ -77,6 +78,7 @@ const Menu = () => {
                         cart={cart} 
                     />
                 </div>
+               
             </div>
         </Boundary>
     )
