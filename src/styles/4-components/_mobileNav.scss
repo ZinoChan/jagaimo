@@ -34,10 +34,19 @@
     left: 0;
 }
 
-@include responsive_max(411px){
+@include responsive_tab(){
+    .mobile-cart{
+        @include flexBox();
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@include responsive_max(450px){
     .mobile-bars, .mobile-cart{
         @include flexBox();
-        width: 20vw;
+        width: 80px!important;
+        height: 50px!important;
     }
 }
 

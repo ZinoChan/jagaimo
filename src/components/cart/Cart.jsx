@@ -9,7 +9,7 @@ import MobileCart from '../ui/MobileCart';
 
 
 
-const Cart = ({dispatch, cart, cartRef}) => {
+const Cart = ({dispatch, cart}) => {
 
     const count = cart.length === 0 ? `no items ` : cart.length === 1 ? 
     `${cart.length }item ` :   `${cart.length} items `;
@@ -24,7 +24,6 @@ const Cart = ({dispatch, cart, cartRef}) => {
                 animate={{x: 0}}
                 transition={{ease: "easeIn", duration: 0.5}} 
                 className="cart"
-                ref={cartRef}
             >
                 <div className="cart-wrapper">
                     <div className="cart-header mb-1">

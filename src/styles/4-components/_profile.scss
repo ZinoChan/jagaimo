@@ -34,3 +34,10 @@
         }
     }
 }
+
+
+@include responsive_mobile(){
+    .profile form{
+        left: 55%!important;
+    }
+}

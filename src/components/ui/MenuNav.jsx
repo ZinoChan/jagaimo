@@ -18,6 +18,10 @@ export default function MenuNav({dispatch}) {
         dispatch(getProducts('iceCream'));
     }
 
+    const handleDrinksClick = () => {
+        dispatch(getProducts('drinks'));
+    }
+
 
     return (
         <>
@@ -34,7 +38,10 @@ export default function MenuNav({dispatch}) {
                 <i className="fas fa-hamburger"></i>
                     Burger
                 </button>
-            <button className="nav-btn">
+            <button 
+                className="nav-btn"
+                onClick={handleDrinksClick}
+            >
                 <i className="fas fa-coffee"></i>
                 Drinks
             </button>

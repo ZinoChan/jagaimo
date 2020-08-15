@@ -53,3 +53,28 @@
         h3:nth-child(2){color: rgb(54, 255, 47); font-size: 2.6rem;}
     }
 }
+
+
+@include responsive_max(1025px){
+    .summary-content{width: 90vw!important;}
+}
+
+@include responsive_max(450px){
+    .summary-content{
+        flex-direction: column;
+        .summary-items{
+            width: 100%!important;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .total-summary{
+        width: 100%!important;
+        text-align: center;
+    }
+
+    .checkout-btns{
+        width: 100%!important;
+        margin: 0!important;
+    }
+}

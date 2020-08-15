@@ -9,17 +9,6 @@ import PrivateRoute from './ClientRoute';
 import PublicRoute from './PublicRoute';
 import HeartSpinner from '../components/ui/HeartSpinner';
 
-// import Home from '../views/home/Home';
-// import Menu from '../views/menu/Menu';
-// import SignIn from '../views/auth/SignIn';
-// import SignUp from '../views/auth/SignUp';
-// import Profile from '../views/account/Profile';
-// import Summary from '../views/checkout/Summary';
-// import Details from '../views/checkout/Details';
-// import Payment from '../views/checkout/Payment';
-// import ItemDetails from '../components/cart/ItemDetails';
-
-
 
 
 const Home = React.lazy(() => import('../views/home/Home'));

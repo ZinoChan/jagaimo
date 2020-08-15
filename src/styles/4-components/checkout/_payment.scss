@@ -20,6 +20,7 @@
     
             p{
                 margin-top: $s-size;
+                margin-bottom: $m-size;
             }
     
             h3{ font-size: $m-size; color: $black; font-weight: $bold;}
@@ -59,4 +60,21 @@
             font-size: $m-size;
         }
     }
+}
+
+
+@include responsive_max(450px){
+    .payment{
+        .credit-card{width: 100%!important;}
+
+        form{width: 100%!important;}
+
+        .credit-card-header{
+            grid-template-columns:  1fr!important;
+        }
+    }
+}
+
+@include responsive_max(350px){
+    .payment .credit-card form .inline-form-control .form-control{width: 100%!important;}
 }

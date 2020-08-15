@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import Badge from './Badge';
 
 export default function MobileCart({toggleCart}) {
 
@@ -12,6 +13,7 @@ export default function MobileCart({toggleCart}) {
     return (
         <>
             <div className='mobile-cart nav-light' onClick={handleClick}>
+                <Badge/>
                 <i ref={cartBtnRef} className="fas fa-shopping-cart"></i>
             </div>  
         </>

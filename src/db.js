@@ -2,60 +2,60 @@ import firebase from './firebase/firebase';
 
 export const items = [
     {
-        title: "Choclate",
+        title: "Choclate smoothy",
         category: "choclate",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-1.png"
+        image: "/imgs/drink-1.png"
     },
     {
-        title: "Vanila",
+        title: "Vanila smoothy",
         category: "vanila",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-5.png",
+        image: "/imgs/drink-5.png",
     },
     {
-        title: "Strawberry",
+        title: "Strawberry smoothy",
         category: "berries",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-2.png"
+        image: "/imgs/drink-2.png"
     },
     {
-        title: "Banana",
+        title: " Caffee",
         category: "Vegan, Vegetarian",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-6.png"
+        image: "/imgs/drink-6.png"
     },
     {
-        title: "Fruits",
+        title: "Fruits smoothy",
         category: "fruits",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-3.png"
+        image: "/imgs/drink-3.png"
     },
     {
-        title: "Orange",
+        title: "Orange smoothy",
         category: "orange",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-7.png"
+        image: "/imgs/drink-6.png"
     },
     {
-        title: "Coffee and Choclate",
+        title: "Coffee smoothy",
         category: "Vegan",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-1.png"
+        image: "/imgs/drink-1.png"
     },
     {
-        title: "Candy",
+        title: "Cocoa smoothy",
         category: "vegan",
         description: "super-smooth texture from air that's introduced as the ingredients are frozen. Available in just chocolate and vanilla, it's most often served in a cone and then dipped in chocolate or rainbow sprinkles.",
         price: 9.99,
-        image: "/imgs/cream-4.png"
+        image: "/imgs/drink-4.png"
     }
     
 ]

@@ -5,6 +5,8 @@
         background-color: $light;
         padding: $m-size 0;
         text-align: center;
+        
+        & div{width: 33.33%; padding: 1rem;}
 
     }
 
@@ -31,8 +33,8 @@
     .client-info{
         border-right: 1px solid #ccc;
         border-left: 1px solid #ccc;
-        padding: 0 $xl-size;
-        margin: 0 15rem;
+        // padding: 0 $xl-size;
+        // margin: 0 15rem;
     }
 
 }
@@ -42,7 +44,7 @@
 .checkout-btns{
     width: 40vw;
     margin: $l-size auto;
-    @include flexBox(space-between, center);
+    @include flexBox(space-between, initial);
 
     .btn-light,.btn-dark{border-radius: 0;}
 }

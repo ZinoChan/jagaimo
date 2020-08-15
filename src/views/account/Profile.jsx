@@ -136,15 +136,14 @@ const Profile = () =>  {
                     
                     <div className="form-control mr-1">
                         <label>Phone Number</label>
-                        <PhoneInput 
-                            country={'ma'} 
+                        <input 
+                            type="phone" 
                             name="mobile"
                             id="mobile"
                             placeholder={profile.mobile}
-                            disabled={readOnly}
+                            readOnly={readOnly}
                             value={formik.values.mobile}
                             onChange={formik.handleChange}
-                            inputClass="input"
                         />
                     
                     </div>

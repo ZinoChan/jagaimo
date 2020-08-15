@@ -30,11 +30,19 @@
 
 }
 
+.openCart{transform: translateX(0)!important; @include transition();}
+
 @include responsive_tab(){
+    .cart{background-color: $secondary-color!important;}
     .cart-info{
         transform: translateX(100%);
         width: 50vw!important;
         position: absolute;
+        @include transition();
         right: 0;
     }
+}
+
+@include responsive_mobile(){
+    .cart-info{width: 80vw!important;}
 }

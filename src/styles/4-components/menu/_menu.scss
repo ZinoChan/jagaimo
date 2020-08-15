@@ -122,7 +122,7 @@
     }
 }
 
-@include responsive_max(411px){
+@include responsive_max(450px){
     .menu{
         width: 100vw!important;
         margin-left: 0!important;

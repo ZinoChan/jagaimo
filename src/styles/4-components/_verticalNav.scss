@@ -83,7 +83,7 @@
     .v-nav{width: 10vw!important;}
 }
 
-@include responsive_max(411px){
+@include responsive_max(450px){
 
     .v-nav{
         width: 20vw!important;

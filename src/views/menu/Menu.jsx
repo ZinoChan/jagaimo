@@ -78,12 +78,11 @@ const Menu = () => {
                         </div>
                     </div>
                 </div>
-                <div className="cart-info">
+                <div className="cart-info" ref={cartRef}>
                     <Cart 
                         dispatch={dispatch} 
                         isLoading={isLoading} 
                         cart={cart} 
-                        cartRef={cartRef}
                     />
                 </div>
             </div>
