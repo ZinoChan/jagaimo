@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { addItem, removeItem } from '../../actions/cartActions';
-import { Link } from 'react-router-dom';
 import { displayActionMessage } from '../../helpers/utils';
 
 
@@ -35,13 +34,12 @@ const ProductItem = ({item, dispatch, inCart}) =>  {
             }}
   
         >
-             <Link  to={`/menu/${item.id}`} className="details-link">
+    
             <div className="item-img" style={{backgroundImage: `url(${item.image})`}}/> 
             <div className="item-info mb-1">
                 <h3>{item.title}</h3>
                 <span className="text-muted">{item.category}</span>
             </div>
-            </Link>
             <div className="item-footer">
                 <span className="price">${item.price}</span>
                 <button 

@@ -31,7 +31,7 @@ const Summary = React.lazy(() => import('../views/checkout/Summary'));
 const Details = React.lazy(() => import('../views/checkout/Details'));
 const Payment = React.lazy(() => import('../views/checkout/Payment'));
 const Contact = React.lazy(() => import('../views/contact/Contact'));
-const ItemDetails = React.lazy(() => import('../components/cart/ItemDetails'));
+
 
 
 
@@ -46,11 +46,6 @@ const AppRouter = () =>  {
         <React.Suspense fallback={<HeartSpinner/>}>
         {/* <AnimatePresence> */}
             <Switch location={location} key={location.key}>
-                <Route
-                    component={ItemDetails}
-                    exact
-                    path='/menu/:item_id'
-                />
                 <PublicRoute
                     component={Home}
                     exact
