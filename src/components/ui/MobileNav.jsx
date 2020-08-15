@@ -11,14 +11,14 @@ export default function MobileNav({theme, toggleNavbar}) {
         mobileRef.current.classList.toggle('fa-times');
     }
 
+
+    
+
     
     return (
         <>
             <div className={`mobile-bars ${theme}`} onClick={handleClick}>
                 <i ref={mobileRef} className='fas fa-bars'></i>
-            </div>
-            <div className={`mobile-cart ${theme}` }>
-                <i class="fas fa-shopping-cart"></i>
             </div>
         </>
     )

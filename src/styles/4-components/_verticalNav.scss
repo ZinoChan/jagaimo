@@ -80,7 +80,7 @@
 }
 
 @include responsive_tab(){
-    .v-nav{width: 13vw!important;}
+    .v-nav{width: 10vw!important;}
 }
 
 @include responsive_max(411px){

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import Boundary from '../../components/ui/Boundary';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../actions/productsActions';
@@ -8,6 +8,7 @@ import  HeartSpinner from '../../components/ui/HeartSpinner';
 import MenuNav from '../../components/ui/MenuNav';
 import Search from '../../components/ui/Search';
 import Cart from '../../components/cart/Cart';
+import MobileCart from '../../components/ui/MobileCart'
 
 //import { motion } from 'framer-motion';
 
@@ -32,6 +33,12 @@ const Menu = () => {
     }, []);
 
     const inCart = (id) => !!cart.find(item => item.id === id);
+
+    const cartRef  = useRef();
+
+    const toggleCart = () => {
+        cartRef.current.classList.toggle('openCart');
+    };
     
   
 
@@ -76,10 +83,11 @@ const Menu = () => {
                         dispatch={dispatch} 
                         isLoading={isLoading} 
                         cart={cart} 
+                        cartRef={cartRef}
                     />
                 </div>
-               
             </div>
+            <MobileCart theme="nav-light" toggleCart={toggleCart}/>
         </Boundary>
     )
 }

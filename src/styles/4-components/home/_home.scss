@@ -91,5 +91,12 @@
     }
 
 
+    @include responsive_max(350px){
+        .social-icons{
+            top: initial!important;
+            bottom: 10px!important;
+        }
+    }
+
 
 }

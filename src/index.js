@@ -30,9 +30,9 @@ const AppRoot = () => (
 )
 
 
+//window.navigator.onLine
 
-
-if(window.navigator.onLine) {
+if(true) {
 
   render(<HeartSpinner/>, document.getElementById('root'));
 

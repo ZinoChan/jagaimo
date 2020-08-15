@@ -5,7 +5,7 @@ export default function Contact() {
         <div className="contact">
             
                 <form action="#">
-                    <h2>Send us a message </h2>
+                    <h2>Contact Us </h2>
                    <div className="form-control">
                        <label>Full Name</label>
                        <input type="text" name="fullname" placeholder="Enter Your Fullname"/>
