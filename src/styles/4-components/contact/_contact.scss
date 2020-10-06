@@ -1,6 +1,6 @@
 .contact{
     @include landingPage();
-    background: $white;
+    background: $secondary-color;
 
     form{
 
@@ -54,7 +54,7 @@
 
 @include responsive_tab(){
     .contact{
-        width: 87vw;
+        width: 90vw;
         margin-left: auto;
 
         form{
@@ -63,7 +63,7 @@
     }
 }
 
-@include responsive_max(411px){
+@include responsive_max(450px){
     .contact{
         width: 100vw!important;
         margin-left: 0!important;

@@ -20,6 +20,7 @@ const Home = () =>  {
     return (
         
             <>
+            
                 {isLoading ? 
                     <div className="spinner-wrapper">
                         <HeartSpinner/>

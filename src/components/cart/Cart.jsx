@@ -1,10 +1,10 @@
-import React, {useRef} from 'react'
+import React from 'react'
 
 import CartItem from '../../components/cart/CartItem'
 import Boundary from '../../components/ui/Boundary';
 import CartTotal from '../../components/cart/CartTotal';
 import { motion } from 'framer-motion';
-import MobileCart from '../ui/MobileCart';
+
 //import HeartSpinner from '../ui/HeartSpinner';
 
 

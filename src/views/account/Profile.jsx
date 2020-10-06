@@ -5,8 +5,7 @@ import { useFormik} from 'formik';
 import { validateDetails} from '../../helpers/ValidateForm';
 import { updateProfile } from '../../actions/profileActions';
 import HeartSpinner from '../../components/ui/HeartSpinner';
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+
 
 
 const Profile = () =>  {
