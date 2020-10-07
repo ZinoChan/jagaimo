@@ -2,7 +2,7 @@
     display: none;
     position: fixed;
     bottom: 0;
-    width: 25vw;
+    width: 80px;
     height: 50px;
     z-index: 9999;
     i{
@@ -45,7 +45,6 @@
 @include responsive_max(450px){
     .mobile-bars, .mobile-cart{
         @include flexBox();
-        width: 80px!important;
         height: 50px!important;
     }
 }

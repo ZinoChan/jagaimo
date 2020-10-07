@@ -1,10 +1,17 @@
 import React from 'react'
+import { displayActionMessage } from '../../helpers/utils';
 
 export default function Contact() {
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        displayActionMessage('Thank You We Will contact you back soon', 'success');
+    } 
+
     return (
         <div className="contact">
             
-                <form action="#">
+                <form onSubmit={handleSubmit}>
                     <h2>Contact Us </h2>
                    <div className="form-control">
                        <label>Full Name</label>
