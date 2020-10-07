@@ -3,13 +3,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Redirect, withRouter } from 'react-router-dom';
 import { SIGNIN, MENU} from '../../../constants/routes';
 
+
+
 const withAuth = (Component) => {
     return withRouter((props) => {
         const {cart, profile, isAuth, isAuthenticating} = useSelector(state => ({
             cart: state.cart,
             profile: state.profile,
             isAuth: !!state.auth.id && !!state.auth.type,
-            isAuthenticating: state.app.isAuthenticating
+            isAuthenticating: state.app.isAuthenticating,
         }));
 
         const dispatch = useDispatch();
@@ -25,6 +27,7 @@ const withAuth = (Component) => {
     
         return (
             <>
+           
                 {!isAuth ?
                     <Redirect to={SIGNIN}/> :
                 cart.length === 0 ? 

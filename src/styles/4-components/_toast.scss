@@ -9,14 +9,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     z-index: 99999;
   
-    // @include mobile {
-    //   width: 80%;
-    //   right: 0;
-    //   left: 0;
-    //   margin: auto;
-    //   display: flex;
-    //   justify-content: center;
-    // }
+    
   }
   
   .toast-msg {
@@ -33,12 +26,12 @@
   }
   
   .toast-info {
-    color: rgb(166, 255, 0);
-    border: 1px solid #a6ff00;
+    color: rgb(206, 178, 19);
+    border: 1px solid #c7c418;
     padding: $m-size;
-    background: lighten(#a6ff00, 45%);
+    background: lighten(#fffb00, 45%);
   
-    .toast-msg { color: #a6ff00; }
+    .toast-msg { color: #c8da2a; }
   }
   
   .toast-success {

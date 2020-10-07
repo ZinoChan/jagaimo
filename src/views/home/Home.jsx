@@ -9,8 +9,9 @@ import {motion } from 'framer-motion';
 
 const Home = () =>  {
 
-    const { isLoading } = useSelector(state => ({
-        isLoading: state.app.loading
+    const { isLoading, isAuthenticating } = useSelector(state => ({
+        isLoading: state.app.loading,
+        isAuthenticating: state.app.isAuthenticating
     }));
 
    
@@ -19,9 +20,13 @@ const Home = () =>  {
 
     return (
         
-            <>
+            <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{ease: "easeIn", duration: 0.5}}>
             
-                {isLoading ? 
+                {isLoading || isAuthenticating ? 
                     <div className="spinner-wrapper">
                         <HeartSpinner/>
                     </div>
@@ -52,14 +57,14 @@ const Home = () =>  {
                         >Eplore Menu</Link>
                         </motion.div>
                     </div>
-                    <div className="social-icons">
+                    {/* <div className="social-icons">
                         <i className="fab fa-facebook-f"></i>
                         <i className="fab fa-twitter"></i>
                         <i className="fab fa-instagram"></i>
-                    </div>
+                    </div> */}
                 </div>)
             }
-            </>
+            </motion.div>
         
         
     )

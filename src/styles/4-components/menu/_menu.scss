@@ -140,3 +140,19 @@
         grid-template-columns: 300px!important;
     }
 }
+
+@include responsive_max(360px){
+    .menu-items{
+        grid-template-columns: 270px!important;
+    }
+}
+
+@include responsive_max(320px){
+    .menu-category .nav-btn {
+        font-size: 1.6rem!important;
+        i{
+            padding: 1.2rem!important;
+            font-size: 1.9rem!important;
+        }
+    }
+}

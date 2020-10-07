@@ -1,11 +1,10 @@
 .cart-total{
    @include flexBox();
    flex-direction: column;
-   height: 300px;
    border-radius: 20px;
    width: 90%;
    margin: 0 auto;
-   padding: $l-size;
+   padding: 1.4rem;
    position:sticky;
    bottom: 0;
    right: 20px;
@@ -17,7 +16,7 @@
    .sub-total, .tax, .total{
        width: 100%;
        @include flexBox(space-between, center);
-       margin-bottom: $m-size;
+       margin-bottom: 1.5rem;
 
        span{
            color: $muted;
@@ -41,5 +40,6 @@
    .checkout-btn{
        border-radius: 10px;
        margin-top: auto;
+       padding: 1.2rem 2.5rem!important;
    }
 }

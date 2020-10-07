@@ -2,8 +2,6 @@ import { call, put, select } from 'redux-saga/effects';
 
 import firebase from '../firebase/firebase';
 
-import history from '../router/AppRouter';
-
 import {
     SIGNIN,
     SIGNUP,
@@ -107,8 +105,6 @@ function* authSaga({type, payload}){
                 yield put(signOutSuccess());
                 yield put(isAuthenticating(false));
                 yield call(displayActionMessage, 'Sign Out Successfully', 'info')
-                yield call(history.push, '/signin');
-                
 
             } catch (e) {
                 yield handleError(e);
@@ -128,7 +124,7 @@ function* authSaga({type, payload}){
         
         case ON_AUTH_STATUS_SUCCESS:
             try {
-                yield put(setAuthStatus({success: true, message: 'Signed In Successfully'}))
+               
                 
                 yield put(isAuthenticating(true));
                 const snapshot = yield call(firebase.getUser, payload.uid);
@@ -139,7 +135,7 @@ function* authSaga({type, payload}){
                     yield call(firebase.addUser, payload.uid, state.user);
                     yield put(setProfile(state.user));
                 }
-                displayActionMessage('Signed In successfully', 'info');
+                
                 
                 yield put(signInSuccess({
                     id: payload.uid,

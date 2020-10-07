@@ -91,7 +91,7 @@ const Profile = () =>  {
                 <span className="name">{`${profile.firstName} ${profile.lastName}`}</span>
             </div>
             <form onSubmit={handleEditClick}>
-            <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2>
+            <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : null: null}</h2>
                 <div className="inline-form-control d-flex">
                     <div className="form-control mr-1">
                         <label>First Name</label>

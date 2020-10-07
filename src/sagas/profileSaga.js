@@ -47,7 +47,7 @@ function* profileSaga({type, payload}){
                 const {email, password } = payload.credentials;
                 yield put(isLoading(true));
 
-                if(email && password && email !== state.profile.email) {
+                if(email !== state.profile.email) {
                     yield call(firebase.updateEmail, password, email);
                 }
                 const newUpdates = {...payload.updates, email: payload.credentials.email}

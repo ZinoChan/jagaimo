@@ -49,7 +49,7 @@ const  CartTotal = ({history}) =>  {
           </div>
           <div className="total">
                 <span>Total</span>
-                <span>${Total}</span>
+                <span>${Total.toFixed(2)}</span>
           </div>
           <button
             className="main-btn checkout-btn"

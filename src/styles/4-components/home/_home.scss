@@ -1,5 +1,7 @@
 .home{
-    @include bgImage('/imgs/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('../../../assets/home-bg.jpg');
     background-size: cover;
     @include landingPage();
     position: relative;
@@ -8,7 +10,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: rgba(0,0,0,.4);
+        background: rgba(0,0,0,.2);
         width: 100%;
         height: 100%;
     }
@@ -90,13 +92,11 @@
         }
     }
 
+}
 
-    @include responsive_max(350px){
-        .social-icons{
-            top: initial!important;
-            bottom: 10px!important;
-        }
+@include responsive_max(350px){
+    .social-icons{
+        top: initial!important;
+        bottom: 10px!important;
     }
-
-
 }

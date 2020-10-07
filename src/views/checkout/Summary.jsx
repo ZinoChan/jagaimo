@@ -4,20 +4,17 @@ import CheckoutHeader from './CheckoutHeader';
 import {MENU, CHECKOUT_STEP_2} from '../../constants/routes';
 import { Link } from 'react-router-dom';
 import withAuth from './hok/withAuth';
-import HeartSpinner from '../../components/ui/HeartSpinner';
 
 
 
-const Summary = ({cart, dispatch, total, isAuthenticating}) => {
+
+
+const Summary = ({cart, dispatch, total}) => {
 
     const Tax = (total * 0.05).toFixed(2);
-    
-    const overlayVisibility = isAuthenticating ? 'visible' : 'hidden';
+
     return (
         <div className="summary">
-            <div className={`auth-overlay ${overlayVisibility}`}>
-                <HeartSpinner/>
-            </div>
             <CheckoutHeader current={1}/>
             <div className="summary-content">
                 <div className="summary-items">
@@ -43,7 +40,7 @@ const Summary = ({cart, dispatch, total, isAuthenticating}) => {
                 </div>
                 <div className="main-total">
                     <h3>Total</h3>
-                    <h3>${parseFloat(total) + parseFloat(Tax)}</h3>
+                    <h3>${(parseFloat(total) + parseFloat(Tax)).toFixed(2)}</h3>
                 </div>
              </div>
             </div>

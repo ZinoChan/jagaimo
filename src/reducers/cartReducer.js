@@ -13,7 +13,7 @@ export default (state = initState, action) => {
     switch(action.type){
         case ADD_TO_CART:
             return state.some(item => item.id === action.payload.id) ?
-                [...state] : [...state, {...action.payload, quantity: 1}]
+                [...state] : [{...action.payload, quantity: 1}, ...state]
 
         case REMOVE_FROM_CART:
             return state.filter(item => item.id !== action.payload);

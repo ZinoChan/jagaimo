@@ -4,27 +4,19 @@ import CheckoutHeader from './CheckoutHeader';
 import { CHECKOUT_STEP_2 } from '../../constants/routes';
 import withAuth from './hok/withAuth';
 import { Formik, Form } from 'formik';
-import { useSelector } from 'react-redux';
+
 import { validatePayment } from '../../helpers/ValidateForm';
-import { setShippingDetails } from '../../actions/shippingActions';
 import { displayActionMessage } from '../../helpers/utils';
 import { CustomTextInput } from '../../helpers/CustomInput';
-import HeartSpinner from '../../components/ui/HeartSpinner';
 
 
-const Payment = ({dispatch, cart, history, isAuthenticating}) => {
 
-    const { user } = useSelector(state => ({
-        user: state.user
-    }));
+const Payment = ({ history}) => {
 
-    const overlayVisibility = isAuthenticating ? 'visible' : 'hidden';
 
     return (
         <div className="payment">
-             <div className={`auth-overlay ${overlayVisibility}`}>
-                <HeartSpinner/>
-            </div>
+            
             <CheckoutHeader current={3}/>
             <div className="credit-card">
                 <div className="credit-card-header">
@@ -50,12 +42,10 @@ const Payment = ({dispatch, cart, history, isAuthenticating}) => {
                     validateOnBlur={true}
                     validateOnChange={true}
 
-                    onSubmit={(values, {setSubmitting, resetForm}) => {
-                        dispatch(setShippingDetails({user, values, cart}))
-                        displayActionMessage('Checkout Successfully ', 'info');
+                    onSubmit={() => {
+                        
+                        displayActionMessage('Payment Confirmed Successfully ', 'success');
                         history.push('/');
-                        resetForm();
-                        setSubmitting(false);
                     }}
                     
                 >

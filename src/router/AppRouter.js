@@ -2,7 +2,7 @@ import React from 'react'
 import {  Switch,   useLocation } from 'react-router-dom';
 import * as ROUTE from '../constants/routes';
 import { createBrowserHistory } from 'history';
-//import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 
 import PrivateRoute from './ClientRoute';
@@ -32,8 +32,8 @@ const AppRouter = () =>  {
 
     return(
         <>
+        <AnimatePresence> 
         <React.Suspense fallback={<HeartSpinner/>}>
-        {/* <AnimatePresence> */}
             <Switch location={location} key={location.key}>
                 <PublicRoute
                     component={Home}
@@ -73,8 +73,8 @@ const AppRouter = () =>  {
                     path={ROUTE.CHECKOUT_STEP_3}
                 />
             </Switch>  
-        {/* </AnimatePresence>   */}
        </React.Suspense>
+       </AnimatePresence> 
         </>
     )
 

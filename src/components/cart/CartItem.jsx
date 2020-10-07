@@ -1,5 +1,4 @@
-import React from 'react'
-//import { motion } from 'framer-motion';
+import React from 'react';
 import { removeItem } from '../../actions/cartActions';
 import ItemControlBtns from './ItemControlBtns';
 
@@ -8,19 +7,6 @@ import ItemControlBtns from './ItemControlBtns';
 
 const CartItem = ({item, dispatch}) =>  {
     
-    /*const slideIn = {
-        hidden: { y: -20, opacity: 0 },
-        visible: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            ease: "linear", 
-            duration: 1,
-            delay: 0.5
-        }
-        }
-      };*/
-
       const onRemoveItemClick = () => {
         dispatch(removeItem(item.id));
     }

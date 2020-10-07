@@ -24,7 +24,10 @@
     }
 
     .empty-cart-img{
-        @include bgImage('/imgs/emptycart.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url('../../../assets/emptycart.png');
+        background-size: contain;
         height: 400px;
     }
 
@@ -37,12 +40,17 @@
     .cart-info{
         transform: translateX(100%);
         width: 50vw!important;
-        position: absolute;
+        position: fixed;
         @include transition();
         right: 0;
+        bottom: 0;
     }
 }
 
 @include responsive_mobile(){
     .cart-info{width: 80vw!important;}
+}
+
+@include responsive_max(360px){
+    .cart-info{width: 100vw!important;}
 }

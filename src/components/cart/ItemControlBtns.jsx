@@ -12,7 +12,7 @@ const ItemControlBtns = ({dispatch, item}) =>  {
     }
 
 
-    console.log(item.quantity);
+    
     return (
         <div className="control-btns">
                 <button 

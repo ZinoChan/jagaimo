@@ -10,8 +10,8 @@
     .cart-img{
         @include bgImage('/imgs/p-1.png');
         background-size: contain!important;
-        height: 120px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
     }
 
     h3{font-size: $m-size;}
@@ -41,4 +41,15 @@
     }
         
 
+}
+
+
+@include responsive_max(450px){
+    .cart-item{
+       flex-wrap: wrap;
+        .cart-img{width: 100%;}
+    }
+    .cart-item-info{
+        height: auto!important;
+    }
 }

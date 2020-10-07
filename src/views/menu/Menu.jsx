@@ -10,7 +10,7 @@ import Search from '../../components/ui/Search';
 import Cart from '../../components/cart/Cart';
 import MobileCart from '../../components/ui/MobileCart'
 
-//import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 
@@ -21,7 +21,7 @@ const Menu = () => {
     const { items, isLoading, cart } = useSelector(state => ({
         items: state.products.items,
         isLoading: state.app.loading,
-        cart: state.cart
+        cart: state.cart,
     }))
     
     
@@ -44,10 +44,14 @@ const Menu = () => {
 
     return (
         <Boundary>
-            
-            <div
-                className="menu"
-            >
+           
+           <motion.div
+           className="menu"
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{ease: "easeIn", duration: 0.5}}>
+    
                 <div className="menu-wrapper">
                     <div className="menu-header mx-auto mb-1">
                         <h2>Menu Category</h2>
@@ -85,7 +89,7 @@ const Menu = () => {
                         cart={cart} 
                     />
                 </div>
-            </div>
+            </motion.div>
             <MobileCart theme="nav-light" toggleCart={toggleCart}/>
         </Boundary>
     )

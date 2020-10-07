@@ -5,38 +5,36 @@ import { CHECKOUT_STEP_3, CHECKOUT_STEP_1} from '../../constants/routes';
 import withAuth from './hok/withAuth';
 import { Formik, Form } from 'formik';
 import { validateDetails } from '../../helpers/ValidateForm';
-import {setUser } from '../../actions/authActions';
+import { setUser } from '../../actions/authActions';
 import {  CustomTextInput } from '../../helpers/CustomInput';
-import HeartSpinner from '../../components/ui/HeartSpinner';
 
 
 
-const Details = ({profile, dispatch, history, isAuthenticating}) =>  {
-      
-    const overlayVisibility = isAuthenticating ? 'visible' : 'hidden';
+
+
+const Details = ({profile, dispatch, history}) =>  {
+    
+
+    
 
     return (
-        <div className="details">
-            <div className={`auth-overlay ${overlayVisibility}`}>
-                <HeartSpinner/>
-            </div>
+        <div className="details"> 
             <CheckoutHeader current={2}/>
             <Formik
                     initialValues={{
-                        firstName: profile.firstName || '',
+                        firstName: profile.firstName  || '',
                         lastName: profile.lastName || '',
                         email: profile.email || '',
                         address: profile.address || '',
                         mobile: profile.mobile || '',
-                        postalCode: profile.postalCode || ''
+                        postalCode: profile.postalCode  || ''
                     }}
 
                     validationSchema={validateDetails}
 
-                    onSubmit={(values, {setSubmitting, resetForm}) => {
+                    onSubmit={(values) => {
                         dispatch(setUser(values));
                         history.push(CHECKOUT_STEP_3);
-                        setSubmitting(false);
                     }}
                     validateOnChange={true}
                 >

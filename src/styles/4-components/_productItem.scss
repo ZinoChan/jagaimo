@@ -15,9 +15,10 @@
     cursor: pointer;
 
     .item-img{
-        @include bgImage('/imgs/p-1.png');
         background-size: contain!important;
         height: 180px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     h3{
