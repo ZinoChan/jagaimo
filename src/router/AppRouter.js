@@ -11,6 +11,7 @@ import HeartSpinner from '../components/ui/HeartSpinner';
 
 
 
+
 const Home = React.lazy(() => import('../views/home/Home'));
 const Menu = React.lazy(() => import('../views/menu/Menu'));
 const SignIn = React.lazy(() => import('../views/auth/SignIn'));
@@ -20,7 +21,7 @@ const Summary = React.lazy(() => import('../views/checkout/Summary'));
 const Details = React.lazy(() => import('../views/checkout/Details'));
 const Payment = React.lazy(() => import('../views/checkout/Payment'));
 const Contact = React.lazy(() => import('../views/contact/Contact'));
-
+const NotFound = React.lazy(() => import('../views/404/NotFound'));
 
 
 
@@ -56,6 +57,7 @@ const AppRouter = () =>  {
                     component={Contact}
                     path={ROUTE.CONTACT}
                 />
+                
                 <PrivateRoute
                     component={Profile}
                     path={ROUTE.PROFILE}
@@ -71,6 +73,9 @@ const AppRouter = () =>  {
                  <PrivateRoute
                     component={Payment}
                     path={ROUTE.CHECKOUT_STEP_3}
+                />
+                 <PublicRoute
+                    component={NotFound}
                 />
             </Switch>  
        </React.Suspense>

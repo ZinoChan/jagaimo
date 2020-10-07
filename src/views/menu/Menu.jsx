@@ -29,7 +29,7 @@ const Menu = () => {
         if(items.length === 0){
             dispatch(getProducts('items'));
         }
-        
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const inCart = (id) => !!cart.find(item => item.id === id);

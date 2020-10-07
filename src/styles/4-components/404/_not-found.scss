@@ -1,0 +1,22 @@
+.not-found{
+    @include flexBox(center, center);
+    flex-direction: column;
+    @include landingPage();
+    background-color: $secondary-color;
+
+    p{
+        margin-bottom: 2rem;
+        font-size: 700;
+        color: $black;
+    }
+
+    ._404-img{
+        width: 90%;
+        height: 200px;
+        max-width: 400px;
+        background-image: url('../../../assets/404.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 2rem;
+    }
+}
