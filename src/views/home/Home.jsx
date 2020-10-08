@@ -54,7 +54,7 @@ const Home = () =>  {
                         <Link 
                             to={MENU} 
                             className="main-btn"
-                        >Eplore Menu</Link>
+                        >Explore Menu</Link>
                         </motion.div>
                     </div>
                     {/* <div className="social-icons">

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import HeartSpinner from '../../components/ui/HeartSpinner';
 import { CustomTextInput } from '../../helpers/CustomInput';
 import { validateSignIn } from '../../helpers/ValidateForm';
-
+import { displayActionMessage } from '../../helpers/utils';
 
 const SignIn = () =>  {
    
@@ -49,7 +49,7 @@ const SignIn = () =>  {
                     {props => (
                         <Form>
                             <h1>Sign In</h1>
-                            <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2>
+                            {authStatus ? !authStatus.success ?  displayActionMessage(authStatus.message,'error') : null: null}
                             <CustomTextInput label="Email" type="email" name="email" placeholder="Email" />
                             <CustomTextInput label="Password" type="password" name="password" placeholder="Password" />
                             <button className="auth-btn" type="submit">Sign In</button>

@@ -54,6 +54,7 @@ function* handleError(e) {
             yield put(setAuthStatus({success: false, message: e}));
             break;
     }
+    yield put(setAuthStatus(null));
 }
 
 function* initRequest(){

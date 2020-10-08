@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import HeartSpinner from '../../components/ui/HeartSpinner';
 import { CustomTextInput } from '../../helpers/CustomInput';
 import { validateSignUp } from '../../helpers/ValidateForm';
+import { displayActionMessage } from '../../helpers/utils';
 
 const SignUp = () =>  {
 
@@ -52,7 +53,7 @@ const SignUp = () =>  {
                     {props => (
                         <Form>
                             <h1>Sign Up</h1>
-                            <h2 className="fire-errors">{authStatus ? !authStatus.success ? authStatus.message : '': ''}</h2> 
+                            {authStatus ? !authStatus.success ?  displayActionMessage(authStatus.message,'error') : null: null}
                             <div className="inline-form-control d-flex">
                                 <CustomTextInput label="FirstName" type="text" name="firstName" placeholder="First name" />
                                 <CustomTextInput label="LastName" type="text" name="lastName" placeholder="Last name" />

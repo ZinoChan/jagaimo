@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from '../../actions/productsActions';
 
 import ProductItem from '../../components/product/ProductItem';
-import  HeartSpinner from '../../components/ui/HeartSpinner';
+
 import MenuNav from '../../components/ui/MenuNav';
 import Search from '../../components/ui/Search';
 import Cart from '../../components/cart/Cart';
 import MobileCart from '../../components/ui/MobileCart'
-
+import Skeleton from 'react-loading-skeleton';
 import { motion } from 'framer-motion';
 
 
@@ -77,8 +77,12 @@ const Menu = () => {
                                 />
                             )) 
                             :
-                            <HeartSpinner/>
-                        }    
+                            new Array(8).fill({}).map((item, index) => (
+                                <div className="mb-3" key={index}>
+                                    <Skeleton height={200}/>
+                                    <Skeleton count={3}/>
+                                </div>
+                            ))                       }    
                         </div>
                     </div>
                 </div>
