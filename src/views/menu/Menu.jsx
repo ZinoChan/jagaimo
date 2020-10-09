@@ -82,7 +82,7 @@ const Menu = () => {
                                     <Skeleton height={200}/>
                                     <Skeleton count={3}/>
                                 </div>
-                            ))                       }    
+                            ))}    
                         </div>
                     </div>
                 </div>

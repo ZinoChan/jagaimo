@@ -1,12 +1,11 @@
 .cart-total{
    @include flexBox();
    flex-direction: column;
-   border-radius: 20px;
+   border-radius: 10px;
    width: 90%;
    margin: 0 auto;
    padding: 1.4rem;
    position:sticky;
-   bottom: 0;
    right: 20px;
    background: $white;
    box-shadow: 0 0 18px -10px #ddd;

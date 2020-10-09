@@ -72,11 +72,17 @@
 
 @include responsive_max(421px){
     html{font-size: 50%;}
-
+    .home{
+        background-position: center right!important;
+    }
     .home-text{
         width: 95%!important;
         h1{
             font-size: 6.5rem!important;
+        }
+
+        .main-btn{
+            padding: 1.5rem 3rem!important;
         }
     }
 
@@ -99,4 +105,6 @@
         top: initial!important;
         bottom: 10px!important;
     }
+
+    .home-text h1{font-size: 4.5rem!important;}
 }

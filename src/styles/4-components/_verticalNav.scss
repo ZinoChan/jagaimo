@@ -2,11 +2,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
     bottom: 0;
+    z-index: 99;
     @include flexBox();
     overflow: hidden;
-    @include transition();
+    @include transition(transform, .2s, linear);
 
     &.openNav{
         transform: translateX(0)!important;
@@ -88,7 +88,6 @@
 
     .v-nav{
         width: 20vw!important;
-        bottom: 50px!important;
         transform: translateX(-120%);
         .logo-img{display: none;}
     }

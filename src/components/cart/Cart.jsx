@@ -26,10 +26,13 @@ const Cart = ({dispatch, cart}) => {
                 className="cart"
             >
                 <div className="cart-wrapper">
-                    <div className="cart-header mb-1">
+                    <div className="cart-header mb-1 mt-5">
                         <h2>You have {count} in your Basket</h2>
                     </div>
                     <div className="cart-content">
+                    {
+                    cart.length !== 0 ? <CartTotal/> : ''
+                    } 
                         {
                             
                             cart.length !== 0 ?
@@ -51,9 +54,7 @@ const Cart = ({dispatch, cart}) => {
                         }
                     </div>
                 </div>
-                {
-                    cart.length !== 0 ? <CartTotal/> : ''
-                } 
+              
             </motion.div>
         </Boundary>
     );

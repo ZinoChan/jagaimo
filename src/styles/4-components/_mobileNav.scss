@@ -1,13 +1,17 @@
-.mobile-bars, .mobile-cart{
+.mobile-bars{
     display: none;
-    position: fixed;
-    bottom: 0;
-    width: 80px;
-    height: 50px;
-    z-index: 9999;
+    width: 100vw;
+    height: 35px;
+    z-index: 9;
+    padding: .5rem 3.5rem;
+    position: relative;
+    z-index: 99;
     i{
-        font-size: 5rem;
+        font-size: 3rem;
         color: $white;
+        display: inline-block;
+       
+      
     }
 
     &.nav-light{
@@ -16,18 +20,22 @@
 
     &.nav-dark{
         background-color: $black;
-        box-shadow: -5px -5px 5px rgba(255,255,255,.13),
-        5px 5px 15px  rgba(255,255,255,.1);
-
-        &.active{
-            box-shadow: inset -5px -5px 5px rgba(255,255,255,.13),
-            inset 5px 5px 15px  rgba(0,0,0,.5);
-        }
+        
     }
 }
 
 .mobile-cart{
-    right: 0;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 80px;
+   height: 80px;
+   background-color: $white;
+   display: none;
+   i{
+       font-size: 4rem;
+       color: $main-color;
+   }
 }
 
 .mobile-bars{
@@ -36,22 +44,44 @@
 
 @include responsive_tab(){
     .mobile-cart{
+        background-color: $white;
+        i{color: $main-color}
+        top: initial!important;
+        bottom: 0;
         @include flexBox();
-        width: 80px;
-        height: 80px;
     }
 }
+
 
 @include responsive_max(450px){
-    .mobile-bars, .mobile-cart{
-        @include flexBox();
-        height: 50px!important;
+    .mobile-cart{
+        text-align: right; 
+        top: .5rem!important;
+        right: 4rem!important;
+        bottom: initial!important;
+        z-index: 99;
+        display: block;
+        background-color: transparent!important;
+        width: 35Px!important;
+        height: 35px!important;
+    i{
+        font-size: 3rem;
+        color: $white;
+        display: inline-block; 
+    }
+
+    .badge{
+        top: -4px;
+        right: -11px;
+        font-size: 1.3rem;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;;
+    }
+    }
+
+    .mobile-bars{
+        display: block;
     }
 }
 
-@include responsive_max(360px){
-    .mobile-bars, .mobile-cart{
-        @include flexBox();
-        width: 25vw;
-    }
-}

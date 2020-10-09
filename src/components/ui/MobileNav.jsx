@@ -17,8 +17,8 @@ export default function MobileNav({theme, toggleNavbar}) {
     
     return (
         <>
-            <div className={`mobile-bars ${theme}`} onClick={handleClick}>
-                <i ref={mobileRef} className='fas fa-bars'></i>
+            <div className={`mobile-bars ${theme}`}>
+                <i onClick={handleClick} ref={mobileRef} className='fas fa-bars'></i>
             </div>
         </>
     )
