@@ -4,8 +4,9 @@
     left: 0;
     bottom: 0;
     z-index: 99;
+    overflow-y: auto;
+    overflow-x: hidden;
     @include flexBox();
-    overflow: hidden;
     @include transition(transform, .2s, linear);
 
     &.openNav{

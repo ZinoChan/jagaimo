@@ -10,6 +10,7 @@
     .cart-wrapper{
         width: 98%;
         margin: $s-size auto;
+        
     }
 
     h2{
@@ -53,4 +54,5 @@
 
 @include responsive_max(360px){
     .cart-info{width: 100vw!important;}
+    .cart-wrapper{padding-top: 3.4rem;}
 }

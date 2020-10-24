@@ -1,7 +1,7 @@
 .menu{
     @include landingPage();
     background-color: $bg-color;
-    padding: $s-size 0;
+    padding: $m-size 0;
     @include flexBox(space-between, center);
     width: 100vw;
     padding-left: 110px;
@@ -93,7 +93,7 @@
     .menu{
         width: 90vw;
         margin-left: auto;
-        padding:  0 2rem;
+        padding:  2rem;
 
         .menu-wrapper{
             padding: 0!important;

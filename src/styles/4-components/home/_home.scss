@@ -5,6 +5,9 @@
     background-size: cover;
     @include landingPage();
     position: relative;
+    padding-top: 2rem;
+    
+    
 
     .overlay{
         position: absolute;
