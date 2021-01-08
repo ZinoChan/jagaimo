@@ -13,24 +13,19 @@ const PublicRoute = ({ isAuth, userType, path, component: Component, ...rest}) =
             component={props => (
                 (isAuth  && userType === 'client') && (path === ROUTE.SIGNIN || path === ROUTE.SIGNUP) ?
                     
-                    <Redirect to={ROUTE.HOME}/>
+                    <Redirect to={ROUTE.MENU}/>
                     
                     :
-                    path === ROUTE.SIGNIN || path === ROUTE.SIGNUP ?
+                    path === ROUTE.SIGNIN || path === ROUTE.SIGNUP || path === ROUTE.HOME ?
                     <>
                         <Component {...props}/>
                     </>
                     :
-                    path !== ROUTE.HOME ? 
                     <>
                         <VerticalNav path={path} isAuth={isAuth} theme="nav-light"/>
                         <Component {...props}/>
                     </>
-                    :
-                    <>
-                        <VerticalNav path={path} isAuth={isAuth} theme="nav-dark"/>
-                        <Component {...props}/>
-                    </>
+                    
                     
             )}
        />
