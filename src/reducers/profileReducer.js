@@ -3,7 +3,7 @@ import { SET_PROFILE, UPDATE_PROFILE_SUCCESS, CLEAR_PROFILE } from '../constants
 const initState = {};
 
 
-export default (state = initState, action) => {
+const profileReducer =  (state = initState, action) => {
     switch(action.type){
         case SET_PROFILE:
             return action.payload
@@ -20,3 +20,5 @@ export default (state = initState, action) => {
             return state;
     }
 }
+
+export default profileReducer;

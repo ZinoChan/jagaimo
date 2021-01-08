@@ -1,7 +1,7 @@
 import {SET_USER, CLEAR_USER } from '../constants/constants';
 
 
-export default (state={}, action) => {
+const userReducer = (state={}, action) => {
     switch(action.type){
         case SET_USER:
             return action.payload;
@@ -11,3 +11,5 @@ export default (state={}, action) => {
             return state
     }
 }
+
+export default userReducer;

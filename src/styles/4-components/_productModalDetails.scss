@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: $s-size;
-    .product-img{
-        @include bgImage('/imgs/p-1.png')
-    }
+    // .product-img{
+    //     @include bgImage('/imgs/p-1.png')
+    // }
 }

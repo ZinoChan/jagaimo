@@ -8,8 +8,9 @@
     @include flexBox(space-between, center);
 
     .cart-img{
-        @include bgImage('/imgs/p-1.png');
+        // @include bgImage('/imgs/p-1.png');
         background-size: contain!important;
+        background-repeat: no-repeat;
         height: 150px;
         width: 150px;
     }

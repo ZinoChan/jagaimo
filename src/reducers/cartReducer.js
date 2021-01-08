@@ -9,7 +9,7 @@ import {
 
 const initState = [];
 
-export default (state = initState, action) => {
+const cartReducer =  (state = initState, action) => {
     switch(action.type){
         case ADD_TO_CART:
             return state.some(item => item.id === action.payload.id) ?
@@ -45,3 +45,5 @@ export default (state = initState, action) => {
             return state;
     }
 }
+
+export default cartReducer;

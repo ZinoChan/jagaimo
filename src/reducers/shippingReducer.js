@@ -6,7 +6,7 @@ import {
 
 const initState = {};
 
-export default (state= initState, action) => {
+const shippingReducer = (state= initState, action) => {
     switch(action.type){
         case SET_SHIPPING_SUCCESS:
             return {
@@ -21,3 +21,5 @@ export default (state= initState, action) => {
             return state;
     }
 }
+
+export default shippingReducer;

@@ -18,7 +18,7 @@ const persistConfig = {
 
 
 
-export default () => {
+const configureStore = () => {
     const store = createStore(
         persistCombineReducers(persistConfig, rootReducer),
         applyMiddleware(sagaMiddleware)
@@ -28,3 +28,5 @@ export default () => {
     sagaMiddleware.run(rootSaga);
     return { store, persistor};
 }
+
+export default configureStore;

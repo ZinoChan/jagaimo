@@ -1,7 +1,7 @@
 import { GET_PRODUCTS_SUCCESS } from '../constants/constants';
 
 
-export default (state={items: []}, action) => {
+const productsReducer =  (state={items: []}, action) => {
     switch(action.type){
         case GET_PRODUCTS_SUCCESS:
             return {
@@ -12,3 +12,5 @@ export default (state={items: []}, action) => {
             return state;
     }
 }
+
+export default productsReducer;

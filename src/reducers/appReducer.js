@@ -12,7 +12,7 @@ const initState = {
     requestStatus: null
 }
 
-export default (state = initState, action) => {
+ const appReducer = (state = initState, action) => {
     switch(action.type){
         case LOADING:
             return {
@@ -39,3 +39,5 @@ export default (state = initState, action) => {
             return state;
     }
 }
+
+export default appReducer;

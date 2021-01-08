@@ -10,7 +10,7 @@ import shippingReducer from "./shippingReducer";
 
 
 
-export default ({
+ const rootReducer =  ({
     app: appReducer,
     auth: authReducer,
     products: productsReducer,
@@ -19,3 +19,5 @@ export default ({
     user: userReducer,
     shipping: shippingReducer,
 });
+
+export default rootReducer;
