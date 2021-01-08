@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { addItem, removeItem } from '../../actions/cartActions';
 import { displayActionMessage } from '../../helpers/utils';
+import Img from "react-cool-img";
+import loadingImage from '../../assets/loader.gif'
 
 
 const ProductItem = ({item, dispatch, inCart}) =>  {
@@ -35,7 +37,14 @@ const ProductItem = ({item, dispatch, inCart}) =>  {
   
         >
     
-            <div className="item-img" style={{backgroundImage: `url(${item.image})`}}/> 
+            <div className="item-img">
+            <Img
+            style={{width: "100%", height: "100%"}}
+                placeholder={loadingImage}
+                src={item.image}
+                alt={item.title}
+            /> 
+            </div>
             <div className="item-info mb-1">
                 <h3>{item.title}</h3>
                 <span className="text-muted">{item.category}</span>
