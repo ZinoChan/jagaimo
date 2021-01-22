@@ -4,20 +4,14 @@ import 'firebase/firestore';
 import 'firebase/storage';
 
 const firebaseConfig = {
-    // apiKey: YOUR_API_KEY_HERE,
-    // authDomain: YOUR_AUTH_DOMAIN_HERE,
-    // databaseURL: YOUR_DATABASE_URL_HERE,
-    // projectId: YOUR_PROJECT_ID_HERE,
-    // storageBucket: YOUR_STORAGE_BUCKET_HERE,
-    // messagingSenderId: YOUR_MESSAGING_HERE,
-    // appId: YOUR_AP_ID_HERE
-    apiKey: "AIzaSyBe23lcUU1XZUB-1FPDNzFn34xBuLe4Foo",
-    authDomain: "pizza-16763.firebaseapp.com",
-    databaseURL: "https://pizza-16763.firebaseio.com",
-    projectId: "pizza-16763",
-    storageBucket: "pizza-16763.appspot.com",
-    messagingSenderId: "214614669796",
-    appId: "1:214614669796:web:c2b399aa9710e1f16e6ff1"
+    apiKey: YOUR_API_KEY_HERE,
+    authDomain: YOUR_AUTH_DOMAIN_HERE,
+    databaseURL: YOUR_DATABASE_URL_HERE,
+    projectId: YOUR_PROJECT_ID_HERE,
+    storageBucket: YOUR_STORAGE_BUCKET_HERE,
+    messagingSenderId: YOUR_MESSAGING_HERE,
+    appId: YOUR_AP_ID_HERE
+   
 
 };
 
