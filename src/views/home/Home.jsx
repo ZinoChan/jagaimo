@@ -4,11 +4,13 @@ import { MENU } from '../../constants/routes';
 import HeartSpinner from '../../components/ui/HeartSpinner';
 import { useSelector } from 'react-redux';
 
+
 import {motion } from 'framer-motion';
 
 
 const Home = () =>  {
 
+    
     const { isLoading, isAuthenticating } = useSelector(state => ({
         isLoading: state.app.loading,
         isAuthenticating: state.app.isAuthenticating

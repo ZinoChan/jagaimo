@@ -10,8 +10,6 @@ import PublicRoute from './PublicRoute';
 import HeartSpinner from '../components/ui/HeartSpinner';
 
 
-
-
 const Home = React.lazy(() => import('../views/home/Home'));
 const Menu = React.lazy(() => import('../views/menu/Menu'));
 const SignIn = React.lazy(() => import('../views/auth/SignIn'));
@@ -31,6 +29,8 @@ const AppRouter = () =>  {
 
     const location = useLocation();
 
+    
+
     return(
         <>
         <AnimatePresence> 
@@ -42,36 +42,45 @@ const AppRouter = () =>  {
                     path={ROUTE.HOME}                  
                 />
                 <PublicRoute
-                    component={Menu}          
+                    component={Menu}  
+                    exact        
                     path={ROUTE.MENU}
                 />
                 <PublicRoute
                     component={SignIn}
+                    exact
                     path={ROUTE.SIGNIN}
                 />
                  <PublicRoute
                     component={SignUp}
+                    exact
                     path={ROUTE.SIGNUP}
                 />
-                <PublicRoute
+                <PrivateRoute
                     component={Contact}
+                    exact
                     path={ROUTE.CONTACT}
                 />
                 
+                
                 <PrivateRoute
                     component={Profile}
+                    exact
                     path={ROUTE.PROFILE}
                 />
                 <PrivateRoute
                     component={Summary}
+                    exact
                     path={ROUTE.CHECKOUT_STEP_1}
                 />
                  <PrivateRoute
                     component={Details}
+                    exact
                     path={ROUTE.CHECKOUT_STEP_2}
                 />
                  <PrivateRoute
                     component={Payment}
+                    exact
                     path={ROUTE.CHECKOUT_STEP_3}
                 />
                  <PublicRoute

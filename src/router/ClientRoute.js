@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom';
-import { HOME } from '../constants/routes';
+import { SIGNIN } from '../constants/routes';
 import VerticalNav from '../components/ui/VerticalNav';
 import { useSelector } from 'react-redux';
 import { PROFILE } from '../constants/routes';
@@ -9,6 +9,8 @@ import { PROFILE } from '../constants/routes';
 
 
 const PrivateRoute = ({ path, component: Component, ...rest}) => {
+
+    
     
     const {isAuth, userType} = useSelector(state => ({
         isAuth: !!state.auth.id && !!state.auth.type,
@@ -18,21 +20,28 @@ const PrivateRoute = ({ path, component: Component, ...rest}) => {
     return(
         <Route
             {...rest}
-            component={props => (
+            render={props => {
+                
+                
+               return (
                 (isAuth && userType === 'client') ?  path === PROFILE ?
-                    <>
-                        <VerticalNav isAuth={isAuth} theme="nav-light"/>
-                        <Component {...props}/>
-                   
-                    </>
-                    
-                : 
                 <>
+                    <VerticalNav isAuth={isAuth} theme="nav-light"/>
                     <Component {...props}/>
+               
                 </>
-                :
-                    <Redirect to={HOME}/>
+                
+            : 
+            <>
+                <Component {...props}/>
+            </>
+            :
+            <Redirect to={{
+                pathname: SIGNIN,
+                state: { from: props.location }
+            }}/>
             )
+        }
 
             }
         />

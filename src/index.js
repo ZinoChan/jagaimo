@@ -22,7 +22,7 @@ const AppRoot = () => (
     <StrictMode>
       <Provider store={store}>
       <PersistGate loading={HeartSpinner()} persistor={persistor}>
-        <BrowserRouter>
+        <BrowserRouter >
           <AppRouter/>
         </BrowserRouter>
       </PersistGate>
@@ -31,9 +31,9 @@ const AppRoot = () => (
 )
 
 
-//window.navigator.onLine
 
-if(true) {
+
+if(window.navigator.onLine) {
 
   render(<HeartSpinner/>, document.getElementById('root'));
 

@@ -62,7 +62,7 @@
     background-color: transparent;
     font-size: $m-size;
     border-radius: 10px;
-    padding:$s-size;
+    padding: 1rem;
     @include transition(all, .3s, ease-in-out);
     @include flexBox();
     flex-direction: column;

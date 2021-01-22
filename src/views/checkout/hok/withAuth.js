@@ -6,7 +6,12 @@ import { SIGNIN, MENU} from '../../../constants/routes';
 
 
 const withAuth = (Component) => {
+    
+
     return withRouter((props) => {
+        
+       
+
         const {cart, profile, isAuth, isAuthenticating} = useSelector(state => ({
             cart: state.cart,
             profile: state.profile,
@@ -23,16 +28,18 @@ const withAuth = (Component) => {
                   }, 0).toFixed(2);
             }
         };
-    
-    
+        
+
         return (
             <>
            
                 {!isAuth ?
-                    <Redirect to={SIGNIN}/> :
+                    <Redirect to={SIGNIN}/> 
+                   
+                    :
                 cart.length === 0 ? 
                     <Redirect to={MENU}/> :
-                    null
+                    null 
                 }  
                     <Component 
                         {...props}
